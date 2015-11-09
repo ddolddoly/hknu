@@ -1,0 +1,364 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.example.picar.MainActivity" >
+    
+
+   	<!-- 메인 뷰 -->
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+	    android:background="#ffffff">
+	    
+		<!-- 메뉴바 컨테이너 -->
+		<RelativeLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="45dp"
+		    android:background="#33c0f3" >
+		    
+		    <ImageButton 
+		        android:id="@+id/button_help"
+		        android:layout_width="36dp"
+		        android:layout_height="36dp"
+		        android:layout_centerVertical="true"
+		        android:layout_alignParentRight="true"
+		        android:layout_marginRight="10dp"
+		        android:background="@drawable/btn_help"/>
+		    
+		    <ImageButton 
+		        android:id="@+id/button_favorite"
+		        android:layout_width="36dp"
+		        android:layout_height="36dp"
+		        android:layout_centerVertical="true"
+		        android:layout_toLeftOf="@id/button_help"
+		        android:layout_marginRight="10dp"
+		        android:background="@drawable/btn_favorite"/>
+		</RelativeLayout>
+		
+		
+	    <!-- 상단부 컨테이너 -->
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="0.9"
+	        android:layout_margin="3dp"
+	        android:padding="2dp"
+	        android:background="#ededed" >
+	        
+	        <!-- 구글맵 컨테이너 -->
+	        <LinearLayout 
+	            android:id="@+id/layout_map"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent" >
+	            
+			    <fragment
+			        android:id="@+id/map"
+			        android:name="com.example.GoogleMapVersion2.Fragment"
+			        android:layout_width="match_parent"
+			        android:layout_height="match_parent"
+			        class="com.google.android.gms.maps.SupportMapFragment" />
+	        </LinearLayout>
+	        
+	        <!-- 거리 표시 뷰 -->
+	        <TextView
+	            android:id="@+id/textview_distance"
+	        	android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	            android:background="#ccededed"
+	            android:padding="1dp"
+	            android:textColor="#33c0f3"
+	            android:textSize="16sp"
+	        	android:text="distance : --.--m" />
+	        
+	        <!-- 즐겨찾기 저장하기 컨테이너 -->
+	        <LinearLayout
+	            android:id="@+id/layout_map_bottom"
+	            android:layout_width="match_parent"
+	            android:layout_height="40dp"
+	            android:visibility="gone"
+	            android:orientation="horizontal"
+	            android:background="#ccededed"
+	            android:layout_alignParentBottom="true">
+			    
+	            <TextView
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent"
+	                android:layout_weight="1"
+	                android:layout_marginLeft="5dp"
+	                android:textColor="#33c0f3"
+	                android:gravity="center_vertical"
+	                android:text="다음 지점을 추가하거나\n현재까지 추가한 지점들을 저장해주세요." />
+	            
+	            <Button
+	                android:id="@+id/button_favorite_save"
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent"
+	                android:layout_weight="4"
+	                android:background="#00000000"
+	                android:textSize="16sp"
+	                android:textStyle="bold"
+	                android:text="저장" />
+	                		    
+	        </LinearLayout>
+	        
+	        
+	        <!-- 카메라 웹뷰 -->
+	        <WebView 
+	            android:id="@+id/webview_camera"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:visibility="gone"
+	            android:gravity="center" />
+	        
+	        
+	        <!-- 즐겨찾기 컨테이너 -->
+	        <RelativeLayout 
+	            android:id="@+id/container_favorite"
+	            android:layout_width="100dp"
+	            android:layout_height="160dp"
+			    android:layout_alignParentRight="true"
+			    android:paddingLeft="1dp"
+			    android:paddingBottom="1dp"
+		    	android:visibility="gone"
+			    android:background="#33c0f3" >
+	            
+		       	<ScrollView 
+					android:id="@+id/scroll_favorite"
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:layout_alignParentRight="true"
+				    android:background="#ffffff" >
+		    
+					<LinearLayout 
+					    android:id="@+id/layout_favorite"
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content"
+					    android:orientation="vertical" >
+				     
+					</LinearLayout>
+				</ScrollView>
+	        </RelativeLayout>
+	    </RelativeLayout>
+	
+	    
+	    <!-- 하단부 컨테이너 -->
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:layout_marginTop="2dp"
+	        android:padding="1dp" >
+	        
+	        <!-- 조종 버튼 컨테이너 -->
+		    <RelativeLayout
+		        android:id="@+id/container_joystick"
+		        android:layout_width="220dp"
+		        android:layout_height="220dp"
+		        android:layout_marginTop="35dp"
+		        android:layout_centerHorizontal="true" >
+		       	
+		        <RelativeLayout
+		            android:id="@+id/layout_joystick"
+		            android:layout_width="200dp"
+		            android:layout_height="200dp"
+		            android:layout_margin="10dp"
+		            android:layout_centerHorizontal="true"
+		            android:background="@drawable/image_control_bg">
+				</RelativeLayout>
+		
+		        <Button
+		            android:id="@+id/button_forward_animation"
+		            android:layout_width="34dp"
+		            android:layout_height="34dp"
+		            android:layout_centerHorizontal="true"
+		            android:layout_marginTop="0dp"
+		            android:clickable="false"
+		            android:background="@drawable/btn_control_normal" />
+		
+		        <Button
+		            android:id="@+id/button_left_animation"
+		            android:layout_width="34dp"
+		            android:layout_height="34dp"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="0dp"
+		            android:clickable="false"
+		            android:background="@drawable/btn_control_normal" />
+		        
+		        <Button
+		            android:id="@+id/button_right_animation"
+		            android:layout_width="34dp"
+		            android:layout_height="34dp"
+		            android:layout_centerVertical="true"
+		            android:layout_alignParentRight="true"
+		            android:clickable="false"
+		            android:background="@drawable/btn_control_normal" />
+		
+		        <Button
+		            android:id="@+id/button_backward_animation"
+		            android:layout_width="34dp"
+		            android:layout_height="34dp"
+		            android:layout_centerHorizontal="true"
+		            android:layout_alignParentBottom="true"
+		            android:clickable="false"
+		            android:background="@drawable/btn_control_normal" />
+	
+		    </RelativeLayout>
+		    
+		    
+		    <!-- 이미지 버튼 컨테이너 -->
+	        <RelativeLayout 
+	            android:layout_width="100dp"
+	            android:layout_height="100dp"
+	            android:layout_marginLeft="5dp"
+	            android:layout_marginTop="5dp"
+	            android:background="@drawable/image_btn_bg" >
+	            
+	            <ImageButton
+			        android:id="@+id/button_camera"
+			        android:layout_width="45dp"
+			        android:layout_height="45dp"
+			        android:layout_marginLeft="38dp"
+			        android:layout_marginTop="14dp"
+			        android:scaleType="fitCenter"
+			        android:background="#00ffffff"
+			        android:src="@drawable/btn_camera_off" />
+	            
+				<ImageButton
+			        android:id="@+id/button_adjust"
+			        android:layout_width="23dp"
+			        android:layout_height="23dp"
+			        android:layout_marginLeft="6dp"
+			        android:layout_marginTop="69dp"
+			        android:scaleType="fitCenter"
+			        android:alpha="1.0"
+			        android:background="#00ffffff"
+			        android:src="@drawable/btn_adjust" />
+	            
+	        </RelativeLayout>
+	        
+	        
+	        <!-- 속도 제어 버튼 컨테이너 -->
+	        <RelativeLayout
+	            android:layout_width="65dp"
+	            android:layout_height="130dp"
+	            android:layout_toRightOf="@id/container_joystick"
+	            android:layout_marginTop="80dp"
+	            android:background="@drawable/image_speed_bg" >
+	            
+	            <ImageButton
+	                android:id="@+id/button_speed_up"
+	                android:layout_width="50dp"
+	                android:layout_height="50dp"
+	                android:layout_marginLeft="8dp"
+	                android:layout_marginTop="8dp"
+	                android:background="@drawable/btn_speed_up" />
+	            
+	            <ImageButton
+	                android:id="@+id/button_speed_down"
+	                android:layout_width="50dp"
+	                android:layout_height="50dp"
+	                android:layout_marginLeft="8dp"
+	                android:layout_marginTop="73dp"
+	                android:background="@drawable/btn_speed_down" />
+	            
+	        </RelativeLayout>
+	        
+	        
+	        <!-- Author...! -->
+			<LinearLayout 
+			    android:layout_width="40dp"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:layout_alignParentBottom="true"
+			    android:layout_marginBottom="5dp"
+			    android:gravity="center" >
+			    
+			    <TextView
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="center"
+			        android:textSize="10sp"
+			        android:textColor="#33c0f3"
+			        android:text="Author" />
+			    
+			    <TextView
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="center"
+			        android:textSize="10sp"
+			        android:textColor="#33c0f3"
+			        android:text="이성헌\n박연숙\n정지현\n김성민" />
+			    
+			</LinearLayout>
+	    </RelativeLayout>
+	</LinearLayout>
+
+		
+	<!-- 튜토리얼 뷰페이저 -->
+	<RelativeLayout 
+	    android:id="@+id/layout_pager"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_marginTop="45dp"
+	    android:background="#00ffffff"
+	    android:visibility="gone" >
+	    
+		<android.support.v4.view.ViewPager
+		    android:id="@+id/pager_tutorial"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:background="#00ffffff" >
+		</android.support.v4.view.ViewPager>
+		
+		<LinearLayout 
+		    android:id="@+id/layout_pager_indicator"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:layout_marginBottom="50dp"
+		    android:layout_alignParentBottom="true"
+		    android:layout_centerHorizontal="true" >
+			
+		    <ImageView
+		        android:id="@+id/imageview_pager_indicator1"
+		        style="@style/imageview_pager_indicator"
+		        android:src="@drawable/dot_blue" />
+			
+		    <ImageView
+		        android:id="@+id/imageview_pager_indicator2"
+		        style="@style/imageview_pager_indicator" />
+			
+		    <ImageView
+		        android:id="@+id/imageview_pager_indicator3"
+		        style="@style/imageview_pager_indicator" />
+			
+		    <ImageView
+		        android:id="@+id/imageview_pager_indicator4"
+		        style="@style/imageview_pager_indicator" />
+			
+		    <ImageView
+		        android:id="@+id/imageview_pager_indicator5"
+		        style="@style/imageview_pager_indicator" />
+			
+		    <ImageView
+		        android:id="@+id/imageview_pager_indicator6"
+		        style="@style/imageview_pager_indicator" />
+			
+		    <ImageView
+		        android:id="@+id/imageview_pager_indicator7"
+		        style="@style/imageview_pager_indicator" />
+			
+		    <ImageView
+		        android:id="@+id/imageview_pager_indicator8"
+		        style="@style/imageview_pager_indicator" />
+			
+		    <ImageView
+		        android:id="@+id/imageview_pager_indicator9"
+		        style="@style/imageview_pager_indicator" />
+		    
+		</LinearLayout>
+	</RelativeLayout>
+</RelativeLayout>

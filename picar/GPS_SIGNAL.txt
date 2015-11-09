@@ -1,0 +1,1 @@
+<dictwrapper: {u'epx': 8.607, u'epy': 10.766, u'epv': 29.997, u'ept': 0.005, u'lon': 127.2662425, u'eps': 21.53, u'lat': 37.015938, u'tag': u'GLL', u'track': 0.0, u'mode': 3, u'time': u'2015-10-17T07:42:42.000Z', u'device': u'/dev/ttyAMA0', u'climb': 0.0, u'alt': 55.7, u'speed': 0.279, u'class': u'TPV'}>
