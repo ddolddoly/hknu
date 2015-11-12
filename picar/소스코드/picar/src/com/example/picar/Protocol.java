@@ -1,11 +1,11 @@
-package com.example.picar;
+﻿package com.example.picar;
 
 public class Protocol {
 
 	// PiCar AP
 	public static final String PICAR_IP = "10.0.0.1";
 	public static final String WIFI_SSID = "PiCar";
-	public static final String WIFI_PASSWORD = "01025645448";
+	public static final String WIFI_PASSWORD = "****";
 	
 	// 타입
 	public static final byte PROTOCOL_MOTOR = 'M';
