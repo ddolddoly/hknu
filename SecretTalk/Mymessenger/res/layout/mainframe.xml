@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@android:id/tabhost"
+    android:orientation="vertical" >
+
+////1
+	<LinearLayout
+		android:id= "@+id/friendlist"
+		android:layout_width="fill_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+		<Button
+			android:id="@+id/btnfSearchf"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:onClick="BtnSearchF"
+			android:text="@string/searchf" />
+		<ListView
+			android:id="@+id/lv"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:longClickable="true"
+			/>
+	</LinearLayout>
+////2
+    <LinearLayout
+        android:id= "@+id/chatting"
+	    android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:orientation="vertical">
+           <ListView
+                android:id="@+id/chattlv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+    </LinearLayout>
+
+
+///3
+	<LinearLayout
+		android:id= "@+id/nchatsend"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+			<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:layout_weight="90"
+			android:orientation="horizontal">
+			<ListView
+				android:id="@+id/nchattlv"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="#ffffff"
+				android:dividerHeight="0px"
+				android:transcriptMode="alwaysScroll"
+				android:divider="#ffffff"/>
+			</LinearLayout>
+
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="10"
+				android:orientation="horizontal">
+			<EditText
+				android:id="@+id/ncfeditText1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="3" />
+			<Button
+				android:id="@+id/ncfBtn1"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:onClick="BtnNSendClick"
+				android:text="send"
+				android:layout_weight="10"/>
+		</LinearLayout>
+	</LinearLayout>
+
+</FrameLayout>

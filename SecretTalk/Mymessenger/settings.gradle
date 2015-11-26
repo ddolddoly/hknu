@@ -1,0 +1,1 @@
+include ':gson-2.3.1jar', ':signalr-client-sdk-androidaar', ':signalr-client-sdk-androidjjar', ':signalr-client-sdkjar', ':appcompat-v7-18.0.0', ':ksoap2-android-assembly-2.4-jar-with-dependencies_PATCH_TIZ'

@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coverLinear"
+    tools:context="MainActivity">
+
+    <TextView
+        android:id= "@+id/chatmsg"
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="25dp"/>
+
+</LinearLayout>
+<!-- From: file:/C:/Users/lsw/Desktop/Mymessenger/res/layout/activity_chattingmsg.xml -->

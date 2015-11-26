@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\lsw\Desktop\Mymessenger\libs\android-support-v4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0725d32f682f72bdfb3f61a2cd04dc3763710b6c">
+        <dex dex="C:\Users\lsw\Desktop\Mymessenger\build\intermediates\pre-dexed\debug\android-support-v4-95e1f92b5d7723a720a23945b60841bc973ced8b.jar" />
+    </item>
+    <item
+        jar="C:\Users\lsw\Desktop\Mymessenger\build\intermediates\exploded-aar\Mymessenger\signalr-client-sdk-androidaar\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="7dd09f411175d276b49d144393d7e2c5b454cc7b">
+        <dex dex="C:\Users\lsw\Desktop\Mymessenger\build\intermediates\pre-dexed\debug\classes-909bbd9df42b95d827ac4aea0216eaad1b7d3484.jar" />
+    </item>
+    <item
+        jar="C:\Users\lsw\Desktop\Mymessenger\build\intermediates\exploded-aar\Mymessenger\appcompat-v7-18.0.0\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8f11f56e350eacabf2273f646d981356eea0ed77">
+        <dex dex="C:\Users\lsw\Desktop\Mymessenger\build\intermediates\pre-dexed\debug\classes-f70c0240aab1c32fa0826bf032e0322044803e59.jar" />
+    </item>
+    <item
+        jar="C:\Users\lsw\Desktop\Mymessenger\signalr-client-sdkjar\signalr-client-sdk.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="061383b3c0e520b8c25f819cc18838dc3d39327e">
+        <dex dex="C:\Users\lsw\Desktop\Mymessenger\build\intermediates\pre-dexed\debug\signalr-client-sdk-54f6076969edfda788850958a5b7a270f9653d60.jar" />
+    </item>
+    <item
+        jar="C:\Users\lsw\Desktop\Mymessenger\gson-2.3.1jar\gson-2.3.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="C:\Users\lsw\Desktop\Mymessenger\build\intermediates\pre-dexed\debug\gson-2.3.1-2fe893b7ef466ba5b7362fd4fdf7a80aad9fd49d.jar" />
+    </item>
+    <item
+        jar="C:\Users\lsw\Desktop\Mymessenger\ksoap2-android-assembly-2.4-jar-with-dependencies_PATCH_TIZ\ksoap2-android-assembly-2.4-jar-with-dependencies_PATCH_TIZ.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f16bdb8ee51cbe7270d2d6ffd5e4fd1ba1d354d8">
+        <dex dex="C:\Users\lsw\Desktop\Mymessenger\build\intermediates\pre-dexed\debug\ksoap2-android-assembly-2.4-jar-with-dependencies_PATCH_TIZ-cdda8cf136398c892db2389ae6479d6250cc1ebe.jar" />
+    </item>
+
+</items>

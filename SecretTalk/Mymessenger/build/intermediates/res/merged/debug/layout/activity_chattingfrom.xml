@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id= "@+id/chatLinear"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="90"
+        android:baselineAligned="true">
+
+        <ListView
+            android:id="@+id/chattlv2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:dividerHeight="0px"
+            android:divider="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id= "@+id/chatsend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="10">
+
+        <EditText
+            android:id="@+id/cfeditText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+        <Button
+            android:id="@+id/cfBtn1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:onClick="BtnSearch"
+            android:text="send" />
+
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/C:/Users/lsw/Desktop/Mymessenger/res/layout/activity_chattingfrom.xml -->
