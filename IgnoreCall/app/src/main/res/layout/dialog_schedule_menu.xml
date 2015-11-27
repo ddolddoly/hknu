@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="28dp"
+              android:layout_gravity="center"
+              android:layout_margin="32dp"
+              android:background="@drawable/dialog_bg"
+              style="@style/Theme.AppCompat.Light">
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일정"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:padding="16dp">
+        <Button
+                android:id="@+id/btn_schedule_add"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="등록"/>
+
+        <Button
+                android:id="@+id/btn_schedule_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="수정"/>
+
+        <Button
+                android:id="@+id/btn_schedule_delete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="삭제"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.phone.ignore">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application android:allowBackup="true"
+                 android:label="@string/app_name"
+                 android:icon="@mipmap/ic_launcher"
+                 android:theme="@style/AppTheme">
+
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.ScheduleEditActivity"/>
+
+        <activity android:name=".activity.IgnoreListActivity"/>
+
+        <activity android:name=".activity.BlockedNumberActivity"/>
+        <activity android:name=".activity.ScheduleListActivity"/>
+
+        <service
+                android:name=".service.BackgroundService"
+                android:process=":remote" >
+        </service>
+
+        <receiver android:name=".service.ServiceMonitor$MonitorBR" />
+        <receiver android:name=".receiver.CallStateReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        <activity
+                android:name=".activity.PopupActivity"
+                android:theme="@style/Theme.Transparent">
+        </activity>
+        <activity android:name=".activity.SettingActivity"/>
+
+    </application>
+
+</manifest>
